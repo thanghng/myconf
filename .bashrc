@@ -1,4 +1,5 @@
 # Aliases
+alias please="sudo "
 alias v=nvim
 alias i3cfg="v $HOME/.config/i3/config"
 alias bashrc="v $HOME/.bashrc"
