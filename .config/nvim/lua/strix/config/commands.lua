@@ -1,7 +1,7 @@
 local create_cmd = vim.api.nvim_create_user_command
 
 create_cmd(
-  "ReloadConfig", 
+  "ReloadConfig",
   function ()
     -- local filepath = (vim.fn.stdpath("config").."/init.lua")
     local filepath = vim.fn.expand("%")

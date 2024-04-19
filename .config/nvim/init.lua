@@ -14,5 +14,3 @@ vim.opt.rtp:prepend(lazypath)
 
 require("strix.config")
 require("lazy").setup("strix.plugins")
-
-
