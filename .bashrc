@@ -1,3 +1,8 @@
+# Set environment variables
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+
 # Aliases
 alias please="sudo "
 alias v=nvim
