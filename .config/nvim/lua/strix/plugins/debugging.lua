@@ -10,38 +10,31 @@ return {
       local dapui = require("dapui")
 
       -- C/C++ setup
-      dap.adapters.gdb = {
+      dap.adapters.lldb = {
         type = "executable",
-        command = "/usr/bin/gdb14/bin/gdb",
-        args = { "-i", "dap" }
+        command = "/usr/bin/lldb-dap",
+        name = "lldb"
       }
 
-      dap.configurations.c = {
-        {
-          name = "Launch",
-          type = "gdb",
-          request = "launch",
-          program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-          end,
-          cwd = "${workspaceFolder}",
-          stopAtBeginningOfMainSubprogram = false,
-        },
-      }
       dap.configurations.cpp = {
         {
           name = "Launch",
-          type = "gdb",
+          type = "lldb",
           request = "launch",
           program = function()
             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
           end,
           cwd = "${workspaceFolder}",
-          stopAtBeginningOfMainSubprogram = false,
-        },
+          stopOnEntry = false,
+          args = {}
+        }
       }
+      dap.configurations.c = dap.configurations.cpp
+
       -- End C/C++ setup
 
+      -- nvim-dap-ui setup
+      dapui.setup({})
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
       end
