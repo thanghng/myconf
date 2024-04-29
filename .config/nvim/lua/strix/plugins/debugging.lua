@@ -12,7 +12,7 @@ return {
 			-- C/C++ setup
 			dap.adapters.lldb = {
 				type = "executable",
-				command = "/usr/bin/lldb-dap",
+				command = "lldb-dap",
 				name = "lldb",
 			}
 

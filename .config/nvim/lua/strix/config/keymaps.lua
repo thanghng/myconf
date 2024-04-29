@@ -1,3 +1,3 @@
 local keymap = vim.keymap
 
-keymap.set("n", "<leader><leader>", ":nohlsearch<CR>", {})
+keymap.set("n", "<ESC>", "<cmd>nohlsearch<CR>", {})

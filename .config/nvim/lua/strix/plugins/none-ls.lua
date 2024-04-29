@@ -11,9 +11,10 @@ return {
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.prettier,
 					null_ls.builtins.formatting.black,
+          require("none-ls.diagnostics.flake8"),
 					null_ls.builtins.formatting.clang_format,
+					null_ls.builtins.formatting.prettier,
 					require("none-ls.diagnostics.eslint_d"),
 				},
 				-- on_attach = function(client, bufnr)
@@ -30,13 +31,13 @@ return {
 				-- end,
 			})
 
-			vim.keymap.set({ "n", "v" }, "<leader>gf", function()
+			vim.keymap.set({ "n", "v" }, "<leader>ff", function()
 				vim.lsp.buf.format({
 					filter = function(client)
 						return client.name == "null-ls"
 					end,
 				})
-			end, {})
+			end, { desc = "[F]ormat [F]ile" })
 		end,
 	},
 }
