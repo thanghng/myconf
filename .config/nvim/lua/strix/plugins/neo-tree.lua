@@ -11,7 +11,12 @@ return {
 			local neotree = require("neo-tree")
 			neotree.setup({})
 
-			vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+			vim.keymap.set(
+				"n",
+				"<C-n>",
+				":Neotree source=filesystem reveal=true position=left toggle=true<CR>",
+				{ desc = "Toogle Neotree" }
+			)
 		end,
 	},
 }
