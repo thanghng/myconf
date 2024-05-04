@@ -5,7 +5,12 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]ile" })
+			vim.keymap.set("n", "<leader>sf", function()
+				builtin.find_files({
+					-- hidden = true,
+					-- layout_strategy = "vertical",
+				})
+			end, { desc = "[S]earch [F]ile" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by rip[G]rep" })
 			vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch [B]uffer" })
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
@@ -29,7 +34,7 @@ return {
 				-- defaults = require("telescope.themes").get_dropdown({}),
 				extensions = {
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
+						-- require("telepcope.themes").get_dropdown({}),
 					},
 				},
 			})

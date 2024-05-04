@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -12,7 +11,10 @@ zstyle ':omz:update' frequency 30
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git
+         zsh-autosuggestions
+         zsh-syntax-highlighting
+         vi-mode)
 
 # Set environment variables
 export EDITOR="nvim"
