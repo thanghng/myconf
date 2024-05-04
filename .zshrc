@@ -13,8 +13,7 @@ zstyle ':omz:update' frequency 30
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          zsh-autosuggestions
-         zsh-syntax-highlighting
-         vi-mode)
+         zsh-syntax-highlighting)
 
 # Set environment variables
 export EDITOR="nvim"
