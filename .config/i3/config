@@ -230,6 +230,9 @@ exec ibus-daemon -rxRd
 assign [class="discord"] $ws4
 for_window [class="discord"] floating enable, move position center
 
+# pavucontrol
+for_window [class="Pavucontrol"] floating enable
+
 # No title
 for_window [all] border pixel 5
 

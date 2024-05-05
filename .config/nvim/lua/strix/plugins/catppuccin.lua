@@ -6,6 +6,11 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
+				-- flavour = "mocha",
+				background = {
+					dark = "mocha",
+					light = "latte",
+				},
 				integrations = {
 					cmp = true,
 					gitsigns = true,
@@ -40,7 +45,7 @@ return {
 						enabled = true,
 						-- style = "nvchad"
 					},
-          which_key = true
+					which_key = true,
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
