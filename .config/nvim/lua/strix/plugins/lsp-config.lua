@@ -152,10 +152,6 @@ return {
 					end,
 				},
 			})
-			-- vim.keymap.set("n", "<F11>", vim.lsp.buf.declaration, {})
-			-- vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, {})
-			-- vim.keymap.set("n", "<F1>", vim.lsp.buf.hover, {})
-			-- vim.keymap.set({ "n", "v" }, "<M-CR>", vim.lsp.buf.code_action, {})
 		end,
 	},
 }

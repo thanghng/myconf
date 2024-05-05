@@ -23,9 +23,9 @@ return {
 
 			vim.keymap.set(
 				"n",
-				"<C-n>",
+				"<leader>nt",
 				":Neotree source=filesystem reveal=true position=left toggle=true<CR>",
-				{ desc = "Toogle Neotree" }
+				{ desc = "Toogle [N]eo[t]ree" }
 			)
 		end,
 	},

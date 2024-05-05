@@ -7,7 +7,7 @@ return {
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>sf", function()
 				builtin.find_files({
-					-- hidden = true,
+					hidden = true,
 					-- layout_strategy = "vertical",
 				})
 			end, { desc = "[S]earch [F]ile" })
@@ -32,9 +32,26 @@ return {
 		config = function()
 			require("telescope").setup({
 				-- defaults = require("telescope.themes").get_dropdown({}),
+				defaults = {
+					mappings = {
+						i = {
+							["<M-p>"] = require("telescope.actions.layout").toggle_preview,
+						},
+					},
+					layout_strategy = "vertical",
+					layout_config = {
+						vertical = {
+							mirror = true,
+							prompt_position = "top",
+						},
+					},
+					preview = {
+						hide_on_startup = true,
+					},
+				},
 				extensions = {
 					["ui-select"] = {
-						-- require("telepcope.themes").get_dropdown({}),
+						require("telescope.themes").get_dropdown({}),
 					},
 				},
 			})
