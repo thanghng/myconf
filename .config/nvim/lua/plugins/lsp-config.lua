@@ -67,6 +67,8 @@ return {
           --  See `:help K` for why this keymap.
           map("K", vim.lsp.buf.hover, "Hover Documentation")
 
+          map("<leader>df", vim.diagnostic.open_float, "[D]iagnostic [F]loat")
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed

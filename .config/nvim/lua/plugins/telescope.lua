@@ -16,22 +16,12 @@ return {
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sc", builtin.commands, { desc = "[S]earch Nvim [C]ommand" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch Nvim [K]map" })
-			-- vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "LSP [S]earch [D]iagnostics" })
-			-- vim.keymap.set("n", "<leader>ss", builtin.lsp_document_symbols, { desc = "LSP [S]earch [S]ymbols" })
-			-- vim.keymap.set(
-			-- 	"n",
-			-- 	"<leader>sws",
-			-- 	builtin.lsp_workspace_symbols,
-			-- 	{ desc = "LSP [S]earch [W]orkspace [S]ymbols" }
-			-- )
-			-- vim.keymap.set("n", "<leader>sr", builtin.lsp_references, { desc = "LSP [S]earch [R]eferences" })
 		end,
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 		config = function()
 			require("telescope").setup({
-				-- defaults = require("telescope.themes").get_dropdown({}),
 				defaults = {
 					mappings = {
 						i = {

@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
@@ -31,5 +31,5 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- Load all config
-require("strix.config.commands")
-require("strix.config.keymaps")
+require("config.commands")
+require("config.keymaps")

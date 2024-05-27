@@ -1,5 +1,5 @@
 -- Setup keymaps and other things on top before the plugins do their  things
-require("strix.config")
+require("config")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -16,4 +16,4 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("strix.plugins")
+require("lazy").setup("plugins")
