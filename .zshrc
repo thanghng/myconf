@@ -22,18 +22,7 @@ export VISUAL="nvim"
 # Apply the aliases
 source $HOME/.config/aliases
 
-# function preexec() {
-#     timer=${timer:-$SECONDS}
-# }
-#
-# function precmd() {
-#     if [ $timer ]; then
-#         timer_show=$(($SECONDS - $timer))
-#         timer_show=$(printf '%.*f\n' 3 $timer_show)
-#         export RPROMPT="[%F{$hcolor}%?%F{$dcolor}] : %F{$hcolor}${timer_show}s %F{$dcolor}"
-#         unset timer
-#     fi
-# }
-
 source $ZSH/oh-my-zsh.sh
+
+source <(fzf --zsh)
 
