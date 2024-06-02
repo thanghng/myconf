@@ -31,5 +31,6 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- Load all config
+require("config.autocmds")
 require("config.commands")
 require("config.keymaps")

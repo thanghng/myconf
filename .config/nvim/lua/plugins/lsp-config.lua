@@ -6,7 +6,7 @@ return {
       { "williamboman/mason.nvim",                  opts = {} },
       { "williamboman/mason-lspconfig.nvim" },      -- Bridge between mason and nvim-lsp
       { "WhoIsSethDaniel/mason-tool-installer.nvim" }, -- auto install 3rd tools
-      { "folke/neodev.nvim",                        opts = {} }, -- signature help, docs and completion
+      -- { "folke/neodev.nvim",                        opts = {} }, -- signature help, docs and completion
       { "j-hui/fidget.nvim",                        opts = {} }, -- Extensible UI for Neovim notifications and LSP progress messages
     },
     config = function()
