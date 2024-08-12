@@ -226,6 +226,9 @@ bindsym Print exec flameshot gui
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec ibus-daemon -rxRd
 
+# Volumeicon
+# exec volumeicon &
+
 # Discord
 assign [class="discord"] $ws4
 for_window [class="discord"] floating enable, move position center
