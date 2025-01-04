@@ -8,7 +8,7 @@ git init --bare $HOME/.myconf
 
 - Clonning
 ```bash
-git clone --separate-git-dir=$HOME/.myconf https://github.com/thanghng/myconf.git myconftmp
+git clone --separate-git-dir=$HOME/.myconf git@github.com:thanghng/myconf.git myconftmp
 rsync --recursive --verbose --exclude '.git' myconftmp/ $HOME/
 rm --recursive myconftmp
 ```
