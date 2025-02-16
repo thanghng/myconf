@@ -5,6 +5,7 @@ local opt = vim.opt
 
 opt.cursorline = true
 opt.termguicolors = true
+opt.statusline = "%{expand('%:~:.')} %y %m %r %= %l,%c %p%%"
 
 -- Copying
 opt.clipboard = "unnamedplus"
