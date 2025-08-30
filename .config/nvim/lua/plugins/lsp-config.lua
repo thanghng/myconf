@@ -116,7 +116,7 @@ return {
         bashls = {}, -- Bash LSP
         pyright = {}, -- Python LSP
         cmake = {}, -- Cmake LSP
-        tsserver = {}, -- Typescript LSP
+        ts_ls = {}, -- Typescript LSP
         lua_ls = {
           settings = {
             Lua = {
